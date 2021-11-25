@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailActivity">
+    android:orientation="horizontal"
+    tools:context=".DetailActivity"
+    android:baselineAligned="false">
 
-    <ImageView
-        android:id="@+id/detail_avatar"
-        android:layout_width="@dimen/_200"
-        android:layout_height="@dimen/_200"
-        android:layout_margin="@dimen/_8"
-        android:layout_centerHorizontal="true"
-        android:contentDescription="@string/item_avatar" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center">
+        <ImageView
+            android:id="@+id/detail_avatar"
+            android:layout_width="@dimen/_200"
+            android:layout_height="@dimen/_200"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/item_avatar" />
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_gravity="center"
         android:padding="@dimen/_8"
-        android:layout_below="@+id/detail_avatar">
+        android:layout_weight="1">
         <TextView
             android:id="@+id/detail_name"
             style="@style/detailText"
@@ -160,4 +168,4 @@
 
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>
