@@ -1,9 +1,11 @@
 package paijojr.bfaasubmission1
 
+import android.content.Intent
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -50,7 +52,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showSelectedUser(user: UserModel) {
-        Log.e("MainActivity", user.name)
+        val moveWithObjectIntent = Intent(this@MainActivity, DetailActivity::class.java)
+        moveWithObjectIntent.putExtra(DetailActivity.DETAIL_USER, user)
+        startActivity(moveWithObjectIntent)
+        Toast.makeText(this, getString(R.string.main_detail) + user.name, Toast.LENGTH_SHORT).show()
     }
 
     private val listUser: ArrayList<UserModel>
