@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_8">
+
+    <ImageView
+        android:id="@+id/item_avatar"
+        android:layout_width="@dimen/_64"
+        android:layout_height="@dimen/_64"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/item_avatar" />
+
+    <TextView
+        android:id="@+id/item_text_name"
+        style="@style/itemText.bold"
+        android:layout_marginStart="@dimen/_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item_avatar"
+        app:layout_constraintTop_toTopOf="@+id/item_avatar" />
+
+    <ImageView
+        android:id="@+id/item_location"
+        android:layout_width="@dimen/_24"
+        android:layout_height="@dimen/_24"
+        android:contentDescription="@string/key_location"
+        android:src="@drawable/ic_location_on"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/item_text_name"
+        app:layout_constraintTop_toBottomOf="@+id/item_text_name" />
+
+    <TextView
+        android:id="@+id/item_text_location"
+        style="@style/itemText"
+        android:layout_marginStart="@dimen/_8"
+        app:layout_constraintBottom_toBottomOf="@+id/item_location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item_location"
+        app:layout_constraintTop_toTopOf="@+id/item_location" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

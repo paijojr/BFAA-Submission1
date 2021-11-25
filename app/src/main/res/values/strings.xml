@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">BFAA Submission 1</string>
+    <string name="title_detail">Detail User</string>
+    <string name="splash">Splash Screen</string>
+
+    <string name="main_json">githubuser.json</string>
+    <string name="main_detail">Detail&#160;</string>
+
+    <string name="item_avatar">Avatar</string>
+    <string name="item_username">Username</string>
+    <string name="item_name">Name</string>
+
+    <string name="key_users">users</string>
+    <string name="key_username">username</string>
+    <string name="key_name">name</string>
+    <string name="key_avatar">avatar</string>
+    <string name="key_company">company</string>
+    <string name="key_location">location</string>
+    <string name="key_repository">repository</string>
+    <string name="key_follower">follower</string>
+    <string name="key_following">following</string>
+
+    <string name="detail_at">\@</string>
+    <string name="detail_title_company">Company</string>
+    <string name="detail_title_location">Location</string>
+    <string name="detail_title_repo">Repository</string>
+    <string name="detail_title_follower">Follower</string>
+    <string name="detail_title_following">Following</string>
+
+    <string name="menu_share">Share</string>
+    <string name="share_type">text/plain</string>
+    <string name="dev">Irvan Dwi Pangga \n@paijojr</string>
 </resources>
