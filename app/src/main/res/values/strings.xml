@@ -23,7 +23,7 @@
     <string name="detail_at">\@</string>
     <string name="detail_title_company">Company</string>
     <string name="detail_title_location">Location</string>
-    <string name="detail_title_repo">Repository</string>
+    <string name="detail_title_repo">&#160;Repository</string>
     <string name="detail_title_follower">Follower</string>
     <string name="detail_title_following">Following</string>
 

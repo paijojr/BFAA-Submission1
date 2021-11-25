@@ -117,6 +117,7 @@
                     android:id="@+id/detail_following"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="@dimen/_4"
                     android:layout_marginEnd="@dimen/_1"
                     android:background="@color/primary_dark"
                     android:textColor="@color/white"
@@ -141,13 +142,13 @@
                     android:id="@+id/detail_follower"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="@dimen/_4"
                     android:background="@color/primary_dark"
                     android:textColor="@color/white"
                     android:gravity="center"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_1"
                     android:padding="@dimen/_4"
                     android:background="@color/primary_dark"
                     android:textColor="@color/white"
@@ -155,10 +156,7 @@
                     android:gravity="center"/>
             </LinearLayout>
 
-
-
         </LinearLayout>
-
 
     </LinearLayout>
 

@@ -10,8 +10,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.res.ResourcesCompat
 import com.bumptech.glide.Glide
+import paijojr.bfaasubmission1.function.CustomFunction.Companion.formatNumbers
+import paijojr.bfaasubmission1.function.CustomFunction.Companion.shareDetail
 import paijojr.bfaasubmission1.model.UserModel
-
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var imageAvatar: ImageView
@@ -57,14 +58,15 @@ class DetailActivity : AppCompatActivity() {
         val imageResource: Int = resources.getIdentifier(user.avatar, null, packageName)
         val res: Drawable? = ResourcesCompat.getDrawable(resources, imageResource, null)
         val username:String = getString(R.string.detail_at) + user.username
+        val repo: String = formatNumbers(user.repository) + getString(R.string.detail_title_repo)
 
         textName.text = user.name
         textUsername.text = username
-        textRepo.text =  user.repository.toString()
+        textRepo.text =  repo
         textCompany.text = user.company
         textLocation.text = user.location
-        textFollower.text = user.follower.toString()
-        textFollowing.text = user.following.toString()
+        textFollower.text = formatNumbers(user.follower)
+        textFollowing.text = formatNumbers(user.following)
 
         Glide.with(this)
             .load(res)
@@ -81,6 +83,8 @@ class DetailActivity : AppCompatActivity() {
         val id = item.itemId
 
         if (id == R.id.action_share) {
+            val user = intent.getParcelableExtra<UserModel>(DETAIL_USER) as UserModel
+            shareDetail(this, user)
             Toast.makeText(this, getString(R.string.menu_share), Toast.LENGTH_LONG).show()
             return true
         }

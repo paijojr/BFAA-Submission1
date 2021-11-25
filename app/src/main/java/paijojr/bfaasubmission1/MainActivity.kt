@@ -4,7 +4,6 @@ import android.content.Intent
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
@@ -15,7 +14,6 @@ import paijojr.bfaasubmission1.adapter.UserAdapter
 import paijojr.bfaasubmission1.model.UserModel
 
 class MainActivity : AppCompatActivity() {
-
 
     private lateinit var recycler: RecyclerView
     private val list = ArrayList<UserModel>()
@@ -32,7 +30,6 @@ class MainActivity : AppCompatActivity() {
         recycler = findViewById(R.id.main_recycler)
         recycler.setHasFixedSize(true)
     }
-
 
     private fun showRecyclerList() {
         if (applicationContext.resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
